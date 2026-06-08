@@ -1,4 +1,4 @@
-# CodeAlpha Stock Trading Platform
+# StockPilot | Java Swing Stock Trading Simulator
 
 A professional Java Swing-based stock trading simulation application with real-time price updates, portfolio management, and comprehensive analytics.
 
@@ -21,7 +21,6 @@ A professional Java Swing-based stock trading simulation application with real-t
 - **Best/Worst Performers** - Identify top and bottom performing stocks
 - **Quick Sell** - Sell entire positions with one click
 - **Portfolio Performance Chart** - Visualize portfolio growth over time
-- **Portfolio Allocation Pie Chart** - See asset distribution at a glance
 
 ### Market Features
 - **Stock Search & Filtering** - Search by symbol/company name
@@ -73,7 +72,6 @@ A professional Java Swing-based stock trading simulation application with real-t
 ![Portfolio](screenshots/portfolio.png)
 - Holdings table with detailed metrics
 - Performance chart over time
-- Allocation pie chart
 - Best/worst performer cards
 - Quick sell functionality
 - CSV export option
@@ -136,7 +134,6 @@ CodeAlpha-Stock-Trading-Platform/
 ├── ProfileScreen.java          # User profile
 ├── StockChartPanel.java        # Stock price chart
 ├── PortfolioChartPanel.java    # Portfolio performance chart
-├── PortfolioPieChartPanel.java # Portfolio allocation pie chart
 ├── Theme.java                  # UI theme constants
 ├── data/                       # User data directory
 │   ├── users.properties        # User credentials
@@ -156,12 +153,12 @@ CodeAlpha-Stock-Trading-Platform/
 
 ### Compilation
 ```bash
-javac *.java
+javac -cp ".;lib\flatlaf-3.7.1.jar" *.java
 ```
 
 ### Running the Application
 ```bash
-java Main
+java -cp ".;lib\flatlaf-3.7.1.jar" Main
 ```
 
 ### Using the Compile Script (Windows)
@@ -187,7 +184,7 @@ powershell -ExecutionPolicy Bypass -File compile_and_run.ps1
 
 ### Managing Portfolio
 1. View all holdings in Portfolio tab
-2. See performance charts and allocation
+2. See performance charts
 3. Use Quick Sell to exit positions
 4. Track best/worst performers
 
@@ -258,7 +255,11 @@ This project is created for educational purposes as part of the CodeAlpha intern
 
 ## Author
 
-CodeAlpha Internship Program - Stock Trading Platform Project
+## Author
+
+Sathwika Dondapati
+Computer Science Engineering Student
+Aspiring Software Engineer 
 
 ## Acknowledgments
 

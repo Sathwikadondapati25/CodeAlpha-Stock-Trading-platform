@@ -36,3 +36,4 @@ Thumbs.db
 # Screenshots (to be added manually)
 screenshots/*.png
 screenshots/*.jpg
+*.mp4 

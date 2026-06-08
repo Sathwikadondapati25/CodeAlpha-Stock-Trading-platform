@@ -102,12 +102,21 @@ public class WatchlistScreen extends JPanel implements StockManager.StockUpdateL
                 btn.setFocusPainted(false);
                 btn.setBorder(BorderFactory.createEmptyBorder(4, 12, 4, 12));
                 btn.setCursor(new Cursor(Cursor.HAND_CURSOR));
-                btn.addActionListener(e -> {
-                    String symbol = (String) tableModel.getValueAt(r, 0);
+                return btn;
+            }
+        });
+
+        // Mouse listener for remove button clicks
+        table.addMouseListener(new java.awt.event.MouseAdapter() {
+            @Override
+            public void mouseClicked(java.awt.event.MouseEvent e) {
+                int column = table.columnAtPoint(e.getPoint());
+                int row = table.rowAtPoint(e.getPoint());
+                if (column == 4 && row >= 0) {
+                    String symbol = (String) tableModel.getValueAt(row, 0);
                     storageManager.removeFromWatchlist(authManager.getCurrentUser().getUsername(), symbol);
                     refresh();
-                });
-                return btn;
+                }
             }
         });
     }

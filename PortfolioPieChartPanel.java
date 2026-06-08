@@ -19,7 +19,7 @@ public class PortfolioPieChartPanel extends JPanel {
     };
 
     public PortfolioPieChartPanel() {
-        setBackground(Theme.CARD_BG);
+        setBackground(Color.WHITE);
         setPreferredSize(new Dimension(400, 250));
         this.allocations = new LinkedHashMap<>();
     }

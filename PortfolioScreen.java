@@ -21,7 +21,6 @@ public class PortfolioScreen extends JPanel implements StockManager.StockUpdateL
     private JTable portfolioTable;
     private DefaultTableModel tableModel;
     private PortfolioChartPanel chartPanel;
-    private PortfolioPieChartPanel pieChartPanel;
 
     private JLabel lblTotalInvested;
     private JLabel lblCurrentValue;
@@ -77,6 +76,7 @@ public class PortfolioScreen extends JPanel implements StockManager.StockUpdateL
         JPanel chartContainerPanel = new JPanel(new BorderLayout());
         chartContainerPanel.setBackground(Theme.CARD_BG);
         chartContainerPanel.setBorder(Theme.createCardBorder());
+        chartContainerPanel.setPreferredSize(new Dimension(450, 300));
 
         JLabel chartTitle = new JLabel("Portfolio Performance Over Time");
         chartTitle.setFont(Theme.FONT_SUBHEADER);
@@ -85,19 +85,6 @@ public class PortfolioScreen extends JPanel implements StockManager.StockUpdateL
 
         chartPanel = new PortfolioChartPanel();
         chartContainerPanel.add(chartPanel, BorderLayout.CENTER);
-
-        // --- PORTFOLIO PIE CHART ---
-        JPanel pieChartContainerPanel = new JPanel(new BorderLayout());
-        pieChartContainerPanel.setBackground(Theme.CARD_BG);
-        pieChartContainerPanel.setBorder(Theme.createCardBorder());
-
-        JLabel pieChartTitle = new JLabel("Portfolio Allocation");
-        pieChartTitle.setFont(Theme.FONT_SUBHEADER);
-        pieChartTitle.setForeground(Theme.TEXT_PRIMARY);
-        pieChartContainerPanel.add(pieChartTitle, BorderLayout.NORTH);
-
-        pieChartPanel = new PortfolioPieChartPanel();
-        pieChartContainerPanel.add(pieChartPanel, BorderLayout.CENTER);
 
         // --- HOLDINGS TABLE ---
         String[] cols = {"Symbol", "Company Name", "Shares Owned", "Avg Buy Price", "Total Invested", "Current Price", "Current Value", "Profit / Loss"};
@@ -180,15 +167,18 @@ public class PortfolioScreen extends JPanel implements StockManager.StockUpdateL
         bottomPanel.setOpaque(false);
         bottomPanel.add(scrollPane, BorderLayout.CENTER);
 
-        JPanel chartsPanel = new JPanel(new GridLayout(1, 2, 16, 0));
+        JPanel chartsPanel = new JPanel(new GridLayout(1, 1, 16, 0));
         chartsPanel.setOpaque(false);
         chartsPanel.add(chartContainerPanel);
-        chartsPanel.add(pieChartContainerPanel);
 
         middlePanel.add(chartsPanel, BorderLayout.CENTER);
 
-        centerPanel.add(middlePanel, BorderLayout.CENTER);
-        centerPanel.add(bottomPanel, BorderLayout.CENTER);
+        JPanel contentPanel = new JPanel(new BorderLayout(0, 16));
+        contentPanel.setOpaque(false);
+        contentPanel.add(middlePanel, BorderLayout.CENTER);
+        contentPanel.add(bottomPanel, BorderLayout.SOUTH);
+
+        centerPanel.add(contentPanel, BorderLayout.CENTER);
         centerPanel.add(actionPanel, BorderLayout.SOUTH);
 
         add(centerPanel, BorderLayout.CENTER);
@@ -397,16 +387,6 @@ public class PortfolioScreen extends JPanel implements StockManager.StockUpdateL
             // Update portfolio chart
             double totalPortfolioValue = finalCurrentTotalVal + authManager.getCurrentUser().getBalance();
             chartPanel.updatePortfolioValue(totalPortfolioValue);
-
-            // Update pie chart with allocation data
-            Map<String, Double> allocations = new LinkedHashMap<>();
-            for (Holding h : holdings) {
-                Stock s = stockManager.getStock(h.getSymbol());
-                if (s != null) {
-                    allocations.put(h.getSymbol(), h.getCurrentValue(s.getCurrentPrice()));
-                }
-            }
-            pieChartPanel.updateAllocations(allocations);
 
             // Restore selection index
             if (selectedSymbol != null) {
