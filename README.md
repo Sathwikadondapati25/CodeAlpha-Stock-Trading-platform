@@ -103,6 +103,12 @@ A professional Java Swing-based stock trading simulation application with real-t
 - Modern UI design
 - Multi-user account support
 
+## Demo Video
+
+🎥 Watch Here:
+
+[Watch Demo Video](https://youtu.be/pTUjABWtQn0)
+
 ## Technologies Used
 
 - **Java 17** - Core programming language
