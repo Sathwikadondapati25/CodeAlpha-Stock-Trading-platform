@@ -109,6 +109,7 @@ A professional Java Swing-based stock trading simulation application with real-t
 
 [Watch Demo Video](https://youtu.be/pTUjABWtQn0)
 
+
 ## Technologies Used
 
 - **Java 17** - Core programming language
@@ -261,11 +262,9 @@ This project is created for educational purposes as part of the CodeAlpha intern
 
 ## Author
 
-## Author
-
-Sathwika Dondapati
-Computer Science Engineering Student
-Aspiring Software Engineer 
+Sathwika Dondapati  
+Computer Science Engineering Student  
+Aspiring Software Engineer
 
 ## Acknowledgments
 
