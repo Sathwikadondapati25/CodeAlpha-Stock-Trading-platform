@@ -61,7 +61,6 @@ A professional Java Swing-based stock trading simulation application with real-t
 
 ### Markets
 ![Markets](screenshots/markets.png)
-- Complete stock listing
 - Advanced search and filtering
 - Stock price charts
 - Buy/Sell functionality
@@ -84,7 +83,7 @@ A professional Java Swing-based stock trading simulation application with real-t
 - Quick access to trade
 
 ### Transactions
-![Transactions](screenshots/transactions.png)
+![Transactions](screenshots/transaction.png)
 - Complete transaction history
 - Search by symbol
 - Filter by transaction type
@@ -97,11 +96,12 @@ A professional Java Swing-based stock trading simulation application with real-t
 - Trade statistics
 - Portfolio value summary
 
-### Settings
-![Settings](screenshots/settings.png)
-- Theme configuration
-- Display settings
-- Refresh rate options
+### Login
+![Login](screenshots/login.png)
+- Secure login system
+- User authentication
+- Modern UI design
+- Multi-user account support
 
 ## Technologies Used
 
