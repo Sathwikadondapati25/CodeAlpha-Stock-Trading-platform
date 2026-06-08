@@ -43,7 +43,7 @@ A professional Java Swing-based stock trading simulation application with real-t
 - **Dashboard Analytics** - Comprehensive portfolio statistics
 - **Market Status Indicator** - Real-time market open/closed status
 
-## Screenshots
+## screenshots
 
 ### Dashboard
 ![Dashboard](screenshots/dashboard.png)
