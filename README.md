@@ -46,7 +46,7 @@ A professional Java Swing-based stock trading simulation application with real-t
 ## Screenshots
 
 ### Dashboard
-![dashboard](screenshots/dashboard.png)
+![Dashboard](screenshots/dashboard.png)
 - Portfolio value overview
 - Cash balance display
 - Holdings value tracking
@@ -60,7 +60,7 @@ A professional Java Swing-based stock trading simulation application with real-t
 - Market news feed
 
 ### Markets
-![markets](screenshots/markets.png)
+![Markets](screenshots/markets.png)
 - Complete stock listing
 - Advanced search and filtering
 - Stock price charts
@@ -69,7 +69,7 @@ A professional Java Swing-based stock trading simulation application with real-t
 - Trade confirmation dialogs
 
 ### Portfolio
-![portfolio](screenshots/portfolio.png)
+![Portfolio](screenshots/portfolio.png)
 - Holdings table with detailed metrics
 - Performance chart over time
 - Best/worst performer cards
@@ -77,28 +77,28 @@ A professional Java Swing-based stock trading simulation application with real-t
 - CSV export option
 
 ### Watchlist
-![watchlist](screenshots/watchlist.png)
+![Watchlist](screenshots/watchlist.png)
 - Favorite stocks display
 - Real-time price updates
 - Remove from watchlist
 - Quick access to trade
 
 ### Transactions
-![transactions](screenshots/transactions.png)
+![Transactions](screenshots/transactions.png)
 - Complete transaction history
 - Search by symbol
 - Filter by transaction type
 - Export to CSV
 
 ### Profile
-![profile](screenshots/profile.png)
+![Profile](screenshots/profile.png)
 - Account information
 - Password change
 - Trade statistics
 - Portfolio value summary
 
 ### Settings
-![settings](screenshots/settings.png)
+![Settings](screenshots/settings.png)
 - Theme configuration
 - Display settings
 - Refresh rate options
